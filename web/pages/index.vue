@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-gradient-to-br from-slate-950 via-purple-900/20 to-slate-950 text-white overflow-hidden">
+  <div class="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
     <Header />
 
     <main>
@@ -7,71 +7,64 @@
       <section class="relative min-h-screen flex items-center justify-center px-4">
         <!-- Animated background elements -->
         <div class="absolute inset-0 overflow-hidden">
-          <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
-          <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-          <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-purple-500/5 to-blue-500/5 rounded-full blur-3xl animate-pulse delay-500"></div>
+          <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-slate-800/5 rounded-full blur-3xl animate-pulse"></div>
+          <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-slate-700/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-slate-800/3 to-slate-700/3 rounded-full blur-3xl animate-pulse delay-500"></div>
         </div>
 
         <!-- Grid pattern overlay -->
         <div class="absolute inset-0 opacity-30 bg-grid-pattern"></div>
 
         <div class="relative max-w-6xl mx-auto text-center z-10">
-          <!-- Animated logo -->
+          <!-- Logo -->
           <div class="flex justify-center mb-8">
-            <div class="relative">
-              <div class="text-8xl md:text-9xl animate-bounce delay-100">✈️</div>
-              <div class="absolute inset-0 text-8xl md:text-9xl animate-ping delay-300 opacity-20">✈️</div>
-            </div>
+            <div class="text-8xl md:text-9xl">✈️</div>
           </div>
 
-          <!-- Main title with gradient text -->
-          <h1 class="text-6xl md:text-7xl lg:text-8xl font-black mb-6 bg-gradient-to-r from-white via-purple-200 to-blue-200 bg-clip-text text-transparent animate-gradient">
+          <!-- Main title -->
+          <h1 class="text-6xl md:text-7xl lg:text-8xl font-black mb-6 text-white">
             Pathfinder
           </h1>
 
           <!-- Tagline with typewriter effect -->
           <div class="mb-8 h-8">
             <p class="text-2xl md:text-3xl text-slate-300 font-light">
-              Convert <span class="text-purple-400 font-semibold">JSON</span> to
-              <span class="text-blue-400 font-semibold">JSONPath</span> instantly
+              Convert <span class="text-slate-200 font-semibold">JSON</span> to
+              <span class="text-slate-200 font-semibold">JSONPath</span> instantly
             </p>
           </div>
 
           <!-- Enhanced description -->
           <p class="text-lg md:text-xl text-slate-400 mb-12 max-w-3xl mx-auto leading-relaxed">
             Generate precise JSONPath expressions from any JSON structure.
-            <span class="text-transparent bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text font-semibold">Perfect for data extraction, testing, and automation.</span>
+            <span class="text-slate-200 font-semibold">Perfect for data extraction, testing, and automation.</span>
           </p>
 
           <!-- Enhanced CTA buttons -->
           <div class="flex flex-col sm:flex-row gap-6 justify-center mb-16">
             <NuxtLink
               to="/playground"
-              class="group relative px-10 py-5 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-bold rounded-2xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25 text-lg overflow-hidden"
+              class="group relative px-10 py-5 bg-white hover:bg-slate-100 text-slate-900 font-bold rounded-2xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl text-lg"
             >
-              <span class="relative z-10 flex items-center justify-center gap-2">
+              <span class="flex items-center justify-center gap-2">
                 Try Playground
                 <Icon name="uil:arrow-right" class="w-5 h-5 transform group-hover:translate-x-1 transition-transform" />
               </span>
-              <div class="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </NuxtLink>
 
             <NuxtLink
               to="/docs"
-              class="group relative px-10 py-5 bg-slate-800/50 hover:bg-slate-700/50 text-white font-bold rounded-2xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-slate-500/25 text-lg border border-slate-600 backdrop-blur-sm overflow-hidden"
+              class="group relative px-10 py-5 bg-slate-800 hover:bg-slate-700 text-white font-bold rounded-2xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl text-lg border border-slate-600"
             >
-              <span class="relative z-10 flex items-center justify-center gap-2">
+              <span class="flex items-center justify-center gap-2">
                 Read Docs
-                <Icon name="uil:book" class="w-5 h-5 transform group-hover:-translate-y-0.5 transition-transform" />
+                <Icon name="uil:book" class="w-5 h-5" />
               </span>
-              <div class="absolute inset-0 bg-gradient-to-r from-slate-700 to-slate-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </NuxtLink>
           </div>
 
           <!-- Live demo preview -->
-          <div class="relative group">
-            <div class="absolute -inset-1 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
-            <div class="relative bg-slate-900/50 backdrop-blur-xl rounded-2xl p-6 border border-slate-700/50 max-w-4xl mx-auto">
+          <div class="relative bg-slate-900/50 backdrop-blur-xl rounded-2xl p-6 border border-slate-700/50 max-w-4xl mx-auto">
               <div class="flex items-center justify-between mb-4">
                 <div class="flex items-center gap-2">
                   <div class="w-3 h-3 bg-red-500 rounded-full"></div>
@@ -102,7 +95,6 @@
               </div>
             </div>
           </div>
-        </div>
 
         <!-- Scroll indicator -->
         <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
@@ -114,7 +106,7 @@
       <section class="relative py-32 px-4">
         <div class="max-w-7xl mx-auto">
           <div class="text-center mb-20">
-            <h2 class="text-4xl md:text-5xl lg:text-6xl font-black mb-6 bg-gradient-to-r from-white to-slate-400 bg-clip-text text-transparent">
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-black mb-6 text-white">
               Why Pathfinder?
             </h2>
             <p class="text-xl text-slate-400 max-w-3xl mx-auto">
@@ -126,10 +118,10 @@
             <!-- Background decoration -->
             <div class="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-blue-500/10 to-purple-500/10 rounded-3xl blur-3xl"></div>
 
-            <div class="group relative bg-slate-800/30 backdrop-blur-xl rounded-3xl p-8 border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/10 hover:-translate-y-2">
-              <div class="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-blue-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div class="group relative bg-slate-800/30 backdrop-blur-xl rounded-3xl p-8 border border-slate-700/50 hover:border-slate-600 transition-all duration-300 hover:shadow-2xl hover:shadow-slate-500/10 hover:-translate-y-2">
+              <div class="absolute inset-0 bg-slate-700/10 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div class="relative z-10">
-                <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <div class="w-16 h-16 bg-slate-700 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Icon name="uil:bolt" class="w-8 h-8 text-white" />
                 </div>
                 <h3 class="text-2xl font-bold text-white mb-4">Instant Generation</h3>
@@ -139,10 +131,10 @@
               </div>
             </div>
 
-            <div class="group relative bg-slate-800/30 backdrop-blur-xl rounded-3xl p-8 border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/10 hover:-translate-y-2">
-              <div class="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div class="group relative bg-slate-800/30 backdrop-blur-xl rounded-3xl p-8 border border-slate-700/50 hover:border-slate-600 transition-all duration-300 hover:shadow-2xl hover:shadow-slate-500/10 hover:-translate-y-2">
+              <div class="absolute inset-0 bg-slate-600/10 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div class="relative z-10">
-                <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <div class="w-16 h-16 bg-slate-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Icon name="uil:crosshair" class="w-8 h-8 text-white" />
                 </div>
                 <h3 class="text-2xl font-bold text-white mb-4">Precise Matching</h3>
@@ -152,10 +144,10 @@
               </div>
             </div>
 
-            <div class="group relative bg-slate-800/30 backdrop-blur-xl rounded-3xl p-8 border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/10 hover:-translate-y-2">
-              <div class="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-blue-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div class="group relative bg-slate-800/30 backdrop-blur-xl rounded-3xl p-8 border border-slate-700/50 hover:border-slate-600 transition-all duration-300 hover:shadow-2xl hover:shadow-slate-500/10 hover:-translate-y-2">
+              <div class="absolute inset-0 bg-slate-700/10 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div class="relative z-10">
-                <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <div class="w-16 h-16 bg-slate-700 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Icon name="uil:setting" class="w-8 h-8 text-white" />
                 </div>
                 <h3 class="text-2xl font-bold text-white mb-4">Developer Tools</h3>
@@ -172,7 +164,7 @@
       <section class="relative py-32 px-4 bg-slate-900/30">
         <div class="max-w-7xl mx-auto">
           <div class="text-center mb-20">
-            <h2 class="text-4xl md:text-5xl lg:text-6xl font-black mb-6 bg-gradient-to-r from-white to-slate-400 bg-clip-text text-transparent">
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-black mb-6 text-white">
               How It Works
             </h2>
             <p class="text-xl text-slate-400 max-w-3xl mx-auto">
@@ -183,7 +175,7 @@
           <div class="grid md:grid-cols-2 gap-12 items-center">
             <div class="space-y-8">
               <div class="group flex gap-6 items-start">
-                <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-blue-500 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                <div class="w-12 h-12 bg-slate-700 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                   <span class="text-white font-bold">1</span>
                 </div>
                 <div>
@@ -195,7 +187,7 @@
               </div>
 
               <div class="group flex gap-6 items-start">
-                <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-500 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                <div class="w-12 h-12 bg-slate-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                   <span class="text-white font-bold">2</span>
                 </div>
                 <div>
@@ -207,7 +199,7 @@
               </div>
 
               <div class="group flex gap-6 items-start">
-                <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-blue-500 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                <div class="w-12 h-12 bg-slate-700 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                   <span class="text-white font-bold">3</span>
                 </div>
                 <div>
@@ -220,7 +212,7 @@
             </div>
 
             <div class="relative group">
-              <div class="absolute -inset-1 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
+              <div class="absolute -inset-1 bg-slate-800 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
               <div class="relative bg-slate-900/50 backdrop-blur-xl rounded-2xl p-8 border border-slate-700/50">
                 <div class="flex items-center gap-2 mb-6">
                   <div class="w-3 h-3 bg-red-500 rounded-full"></div>
@@ -243,7 +235,7 @@
                     </div>
                   </div>
                   <div class="flex justify-center">
-                    <div class="w-8 h-8 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center animate-pulse">
+                    <div class="w-8 h-8 bg-slate-700 rounded-full flex items-center justify-center animate-pulse">
                       <Icon name="uil:arrow-down" class="w-4 h-4 text-white" />
                     </div>
                   </div>
@@ -268,7 +260,7 @@
       <section class="relative py-32 px-4">
         <div class="max-w-7xl mx-auto">
           <div class="text-center mb-20">
-            <h2 class="text-4xl md:text-5xl lg:text-6xl font-black mb-6 bg-gradient-to-r from-white to-slate-400 bg-clip-text text-transparent">
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-black mb-6 text-white">
               Use Cases
             </h2>
             <p class="text-xl text-slate-400 max-w-3xl mx-auto">
@@ -277,10 +269,10 @@
           </div>
 
           <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div class="group relative bg-slate-800/30 backdrop-blur-xl rounded-2xl p-8 border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/10 hover:-translate-y-2">
-              <div class="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div class="group relative bg-slate-800/30 backdrop-blur-xl rounded-2xl p-8 border border-slate-700/50 hover:border-slate-600 transition-all duration-300 hover:shadow-2xl hover:shadow-slate-500/10 hover:-translate-y-2">
+              <div class="absolute inset-0 bg-slate-700/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div class="relative z-10">
-                <div class="w-14 h-14 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <div class="w-14 h-14 bg-slate-700 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Icon name="uil:flask" class="w-7 h-7 text-white" />
                 </div>
                 <h3 class="text-xl font-bold text-white mb-3">Testing</h3>
@@ -290,10 +282,10 @@
               </div>
             </div>
 
-            <div class="group relative bg-slate-800/30 backdrop-blur-xl rounded-2xl p-8 border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/10 hover:-translate-y-2">
+            <div class="group relative bg-slate-800/30 backdrop-blur-xl rounded-2xl p-8 border border-slate-700/50 hover:border-slate-600 transition-all duration-300 hover:shadow-2xl hover:shadow-slate-500/10 hover:-translate-y-2">
               <div class="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div class="relative z-10">
-                <div class="w-14 h-14 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <div class="w-14 h-14 bg-slate-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Icon name="uil:chart-bar" class="w-7 h-7 text-white" />
                 </div>
                 <h3 class="text-xl font-bold text-white mb-3">Data Analysis</h3>
@@ -303,10 +295,10 @@
               </div>
             </div>
 
-            <div class="group relative bg-slate-800/30 backdrop-blur-xl rounded-2xl p-8 border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/10 hover:-translate-y-2">
-              <div class="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div class="group relative bg-slate-800/30 backdrop-blur-xl rounded-2xl p-8 border border-slate-700/50 hover:border-slate-600 transition-all duration-300 hover:shadow-2xl hover:shadow-slate-500/10 hover:-translate-y-2">
+              <div class="absolute inset-0 bg-slate-700/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div class="relative z-10">
-                <div class="w-14 h-14 bg-gradient-to-br from-purple-500 to-indigo-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <div class="w-14 h-14 bg-slate-700 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Icon name="uil:robot" class="w-7 h-7 text-white" />
                 </div>
                 <h3 class="text-xl font-bold text-white mb-3">Automation</h3>
@@ -316,10 +308,10 @@
               </div>
             </div>
 
-            <div class="group relative bg-slate-800/30 backdrop-blur-xl rounded-2xl p-8 border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/10 hover:-translate-y-2">
+            <div class="group relative bg-slate-800/30 backdrop-blur-xl rounded-2xl p-8 border border-slate-700/50 hover:border-slate-600 transition-all duration-300 hover:shadow-2xl hover:shadow-slate-500/10 hover:-translate-y-2">
               <div class="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div class="relative z-10">
-                <div class="w-14 h-14 bg-gradient-to-br from-blue-500 to-teal-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <div class="w-14 h-14 bg-slate-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Icon name="il:search" class="w-7 h-7 text-white" />
                 </div>
                 <h3 class="text-xl font-bold text-white mb-3">Debugging</h3>
@@ -336,26 +328,26 @@
       <section class="relative py-32 px-4 bg-slate-900/30">
         <div class="max-w-7xl mx-auto">
           <div class="text-center mb-20">
-            <h2 class="text-4xl md:text-5xl lg:text-6xl font-black mb-6 bg-gradient-to-r from-white to-slate-400 bg-clip-text text-transparent">
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-black mb-6 text-white">
               Trusted by Developers
             </h2>
           </div>
 
           <div class="grid md:grid-cols-3 gap-8">
             <div class="text-center">
-              <div class="text-5xl md:text-6xl font-black bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-4">
+              <div class="text-5xl md:text-6xl font-black text-slate-300 mb-4">
                 10K+
               </div>
               <p class="text-xl text-slate-400">JSON Objects Processed</p>
             </div>
             <div class="text-center">
-              <div class="text-5xl md:text-6xl font-black bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-4">
+              <div class="text-5xl md:text-6xl font-black text-slate-300 mb-4">
                 99.9%
               </div>
               <p class="text-xl text-slate-400">Accuracy Rate</p>
             </div>
             <div class="text-center">
-              <div class="text-5xl md:text-6xl font-black bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-4">
+              <div class="text-5xl md:text-6xl font-black text-slate-300 mb-4">
                 < 1s
               </div>
               <p class="text-xl text-slate-400">Average Processing Time</p>
@@ -368,7 +360,7 @@
       <section class="relative py-32 px-4">
         <div class="max-w-4xl mx-auto text-center">
           <div class="relative group">
-            <div class="absolute -inset-1 bg-gradient-to-r from-purple-600 to-blue-600 rounded-3xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
+            <div class="absolute -inset-1 bg-slate-800 rounded-3xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
             <div class="relative bg-slate-800/50 backdrop-blur-xl rounded-3xl p-12 border border-slate-700/50">
               <h2 class="text-4xl md:text-5xl font-black mb-6 bg-gradient-to-r from-white to-slate-400 bg-clip-text text-transparent">
                 Ready to Transform Your JSON Workflow?
@@ -379,9 +371,9 @@
               <div class="flex flex-col sm:flex-row gap-6 justify-center">
                 <NuxtLink
                   to="/playground"
-                  class="group relative px-10 py-5 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-bold rounded-2xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25 text-lg overflow-hidden"
+                  class="group relative px-10 py-5 bg-white hover:bg-slate-100 text-slate-900 font-bold rounded-2xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl text-lg"
                 >
-                  <span class="relative z-10 flex items-center justify-center gap-2">
+                  <span class="flex items-center justify-center gap-2">
                     Get Started Now
                     <Icon name="uil:rocket" class="w-5 h-5 transform group-hover:translate-x-1 transition-transform" />
                   </span>

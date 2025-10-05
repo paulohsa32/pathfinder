@@ -2,8 +2,8 @@
   <header class="flex items-center justify-between p-4 h-16 bg-slate-950/80 backdrop-blur-xl border-b border-slate-800/50 sticky top-0 z-50 transition-all duration-300">
     <!-- Left side: Logo -->
     <NuxtLink to="/" class="flex items-center space-x-4 group">
-      <div class="text-3xl transform transition-transform duration-300 group-hover:scale-110 group-hover:rotate-12">✈️</div>
-      <h1 class="text-xl font-black bg-gradient-to-r from-white to-slate-400 bg-clip-text text-transparent">Pathfinder</h1>
+      <div class="text-3xl transform transition-transform duration-300 group-hover:scale-110">✈️</div>
+      <h1 class="text-xl font-black text-white">Pathfinder</h1>
     </NuxtLink>
 
     <!-- Center: Navigation -->
@@ -15,7 +15,7 @@
       >
         <span class="relative z-10">Home</span>
         <div
-          class="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-purple-500 to-blue-500 transform origin-left transition-transform duration-300"
+          class="absolute bottom-0 left-0 right-0 h-0.5 bg-slate-400 transform origin-left transition-transform duration-300"
           :class="{ 'scale-x-100': $route.path === '/', 'scale-x-0 group-hover:scale-x-100': $route.path !== '/' }"
         ></div>
       </NuxtLink>
@@ -30,7 +30,7 @@
           <Icon name="uil:play" class="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
         </span>
         <div
-          class="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-purple-500 to-blue-500 transform origin-left transition-transform duration-300"
+          class="absolute bottom-0 left-0 right-0 h-0.5 bg-slate-400 transform origin-left transition-transform duration-300"
           :class="{ 'scale-x-100': $route.path === '/playground', 'scale-x-0 group-hover:scale-x-100': $route.path !== '/playground' }"
         ></div>
       </NuxtLink>
@@ -45,7 +45,7 @@
           <Icon name="uil:book" class="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
         </span>
         <div
-          class="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-purple-500 to-blue-500 transform origin-left transition-transform duration-300"
+          class="absolute bottom-0 left-0 right-0 h-0.5 bg-slate-400 transform origin-left transition-transform duration-300"
           :class="{ 'scale-x-100': $route.path.startsWith('/docs'), 'scale-x-0 group-hover:scale-x-100': !$route.path.startsWith('/docs') }"
         ></div>
       </NuxtLink>
@@ -59,7 +59,7 @@
         rel="noopener noreferrer"
         class="relative group"
       >
-        <div class="absolute -inset-2 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full opacity-0 group-hover:opacity-20 blur transition-opacity duration-300"></div>
+        <div class="absolute -inset-2 bg-slate-400 rounded-full opacity-0 group-hover:opacity-20 blur transition-opacity duration-300"></div>
         <Icon name="uil:github" class="relative text-2xl text-slate-300 hover:text-white transition-all duration-300 group-hover:scale-110 group-hover:rotate-12" />
       </a>
 
@@ -67,13 +67,13 @@
       <div class="hidden lg:block">
         <NuxtLink
           to="/playground"
-          class="group relative px-6 py-2 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25 text-sm overflow-hidden"
+          class="group relative px-6 py-2 bg-slate-700 hover:bg-slate-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25 text-sm overflow-hidden"
         >
           <span class="relative z-10 flex items-center gap-2">
             Get Started
             <Icon name="uil:arrow-right" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
           </span>
-          <div class="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <div class="absolute inset-0 bg-slate-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
         </NuxtLink>
       </div>
 
@@ -82,7 +82,7 @@
         @click="mobileMenuOpen = !mobileMenuOpen"
         class="md:hidden relative group p-2"
       >
-        <div class="absolute -inset-2 bg-gradient-to-r from-purple-500 to-blue-500 rounded-xl opacity-0 group-hover:opacity-20 blur transition-opacity duration-300"></div>
+        <div class="absolute -inset-2 bg-slate-400 rounded-xl opacity-0 group-hover:opacity-20 blur transition-opacity duration-300"></div>
         <Icon
           name="uil:bars"
           class="relative text-2xl text-slate-300 hover:text-white transition-all duration-300 group-hover:scale-110"
@@ -135,7 +135,7 @@
           <div class="pt-4 border-t border-slate-800">
             <NuxtLink
               to="/playground"
-              class="w-full flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105"
+              class="w-full flex items-center justify-center gap-2 px-6 py-3 bg-slate-700 hover:bg-slate-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105"
               @click="mobileMenuOpen = false"
             >
               Get Started
