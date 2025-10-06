@@ -27,7 +27,6 @@
       >
         <span class="relative z-10 flex items-center gap-2">
           Playground
-          <Icon name="uil:play" class="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
         </span>
         <div
           class="absolute bottom-0 left-0 right-0 h-0.5 bg-slate-400 transform origin-left transition-transform duration-300"
@@ -42,7 +41,6 @@
       >
         <span class="relative z-10 flex items-center gap-2">
           Documentation
-          <Icon name="uil:book" class="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
         </span>
         <div
           class="absolute bottom-0 left-0 right-0 h-0.5 bg-slate-400 transform origin-left transition-transform duration-300"
@@ -67,13 +65,12 @@
       <div class="hidden lg:block">
         <NuxtLink
           to="/playground"
-          class="group relative px-6 py-2 bg-slate-700 hover:bg-slate-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25 text-sm overflow-hidden"
+          class="group relative px-6 py-4 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 text-sm overflow-hidden"
         >
           <span class="relative z-10 flex items-center gap-2">
             Get Started
             <Icon name="uil:arrow-right" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
           </span>
-          <div class="absolute inset-0 bg-slate-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
         </NuxtLink>
       </div>
 

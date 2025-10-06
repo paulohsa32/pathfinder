@@ -324,49 +324,17 @@
         </div>
       </section>
 
-      <!-- Stats Section -->
-      <section class="relative py-32 px-4 bg-slate-900/30">
-        <div class="max-w-7xl mx-auto">
-          <div class="text-center mb-20">
-            <h2 class="text-4xl md:text-5xl lg:text-6xl font-black mb-6 text-white">
-              Trusted by Developers
-            </h2>
-          </div>
-
-          <div class="grid md:grid-cols-3 gap-8">
-            <div class="text-center">
-              <div class="text-5xl md:text-6xl font-black text-slate-300 mb-4">
-                10K+
-              </div>
-              <p class="text-xl text-slate-400">JSON Objects Processed</p>
-            </div>
-            <div class="text-center">
-              <div class="text-5xl md:text-6xl font-black text-slate-300 mb-4">
-                99.9%
-              </div>
-              <p class="text-xl text-slate-400">Accuracy Rate</p>
-            </div>
-            <div class="text-center">
-              <div class="text-5xl md:text-6xl font-black text-slate-300 mb-4">
-                < 1s
-              </div>
-              <p class="text-xl text-slate-400">Average Processing Time</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <!-- Final CTA Section -->
       <section class="relative py-32 px-4">
         <div class="max-w-4xl mx-auto text-center">
           <div class="relative group">
             <div class="absolute -inset-1 bg-slate-800 rounded-3xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
             <div class="relative bg-slate-800/50 backdrop-blur-xl rounded-3xl p-12 border border-slate-700/50">
-              <h2 class="text-4xl md:text-5xl font-black mb-6 bg-gradient-to-r from-white to-slate-400 bg-clip-text text-transparent">
+              <h2 class="text-4xl md:text-5xl font-black mb-6 text-white">
                 Ready to Transform Your JSON Workflow?
               </h2>
               <p class="text-xl text-slate-400 mb-8 leading-relaxed">
-                Join thousands of developers who have streamlined their JSONPath generation process.
+                Transform your JSON workflow with our powerful automated JSONPath generation tool.
               </p>
               <div class="flex flex-col sm:flex-row gap-6 justify-center">
                 <NuxtLink
