@@ -60,12 +60,6 @@
           </ul>
         </div>
       </div>
-
-      <div class="mt-8 pt-8 border-t border-slate-700 text-center">
-        <p class="text-slate-400 text-sm">
-          Built with ❤️ using Nuxt, TypeScript, and Tailwind CSS
-        </p>
-      </div>
     </div>
   </footer>
 </template>

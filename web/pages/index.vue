@@ -97,7 +97,7 @@
           </div>
 
         <!-- Scroll indicator -->
-        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div class="absolute z-10 bottom-14 left-1/2 transform -translate-x-1/2 animate-bounce">
           <Icon name="uil:angle-down" class="w-8 h-8 text-slate-400" />
         </div>
       </section>
