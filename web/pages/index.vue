@@ -97,7 +97,11 @@
           </div>
 
         <!-- Scroll indicator -->
-        <div class="absolute z-10 bottom-14 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div
+          ref="scrollIndicator"
+          class="absolute z-10 bottom-14 left-1/2 transform -translate-x-1/2 animate-bounce transition-opacity duration-300"
+          :class="{ 'opacity-0': !showScrollIndicator }"
+        >
           <Icon name="uil:angle-down" class="w-8 h-8 text-slate-400" />
         </div>
       </section>
@@ -370,6 +374,21 @@
 </template>
 
 <script setup lang="ts">
+const showScrollIndicator = ref(true)
+const scrollIndicator = ref<HTMLElement>()
+
+const handleScroll = () => {
+  showScrollIndicator.value = window.scrollY === 0
+}
+
+onMounted(() => {
+  window.addEventListener('scroll', handleScroll)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', handleScroll)
+})
+
 useHead({
   title: 'Pathfinder - Convert JSON to JSONPath',
   meta: [
