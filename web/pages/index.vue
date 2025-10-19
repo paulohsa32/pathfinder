@@ -17,7 +17,7 @@
 
         <div class="relative max-w-6xl mx-auto text-center z-10">
           <!-- Logo -->
-          <div class="flex justify-center mb-8">
+          <div class="flex justify-center mb-8 mt-12">
             <div class="text-8xl md:text-9xl">✈️</div>
           </div>
 
